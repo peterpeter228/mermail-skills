@@ -1,0 +1,713 @@
+TAP version 13
+# node:internal/modules/esm/resolve:274
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/code/mermail-skills/skills/mermail-send-verifier/scripts/classify-mail.mjs' imported from /root/code/mermail-skills/tests/send-verifier/mail.test.mjs
+#     at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:859:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:983:11)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:731:20)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:708:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:310:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:182:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/code/mermail-skills/skills/mermail-send-verifier/scripts/classify-mail.mjs'
+# }
+# Node.js v22.22.0
+# Subtest: tests/send-verifier/mail.test.mjs
+not ok 1 - tests/send-verifier/mail.test.mjs
+  ---
+  duration_ms: 58.61954
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/mail.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 69.135174
+TAP version 13
+# Subtest: M1 selected draft cannot support sent claim
+ok 1 - M1 selected draft cannot support sent claim
+  ---
+  duration_ms: 1.234147
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 53.462802
+TAP version 13
+# Subtest: M1 selected draft cannot support sent claim
+ok 1 - M1 selected draft cannot support sent claim
+  ---
+  duration_ms: 1.748466
+  type: 'test'
+  ...
+# Subtest: M2 recipient_read never proved by sent record
+ok 2 - M2 recipient_read never proved by sent record
+  ---
+  duration_ms: 0.279692
+  type: 'test'
+  ...
+# Subtest: M2 delivered never proved by sent record
+ok 3 - M2 delivered never proved by sent record
+  ---
+  duration_ms: 0.13708
+  type: 'test'
+  ...
+# Subtest: M3 empty result remains unknown
+ok 4 - M3 empty result remains unknown
+  ---
+  duration_ms: 0.122411
+  type: 'test'
+  ...
+# Subtest: M4 timeout means unavailable not email failure
+ok 5 - M4 timeout means unavailable not email failure
+  ---
+  duration_ms: 0.201661
+  type: 'test'
+  ...
+# Subtest: M5 two matching distinct IDs are ambiguous
+ok 6 - M5 two matching distinct IDs are ambiguous
+  ---
+  duration_ms: 0.140978
+  type: 'test'
+  ...
+# Subtest: M6 same ID duplicates deduplicate evidence
+ok 7 - M6 same ID duplicates deduplicate evidence
+  ---
+  duration_ms: 0.227847
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate state remains ambiguous
+ok 8 - M6 conflicting duplicate state remains ambiguous
+  ---
+  duration_ms: 0.130932
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate recipients remain ambiguous
+ok 9 - M6 conflicting duplicate recipients remain ambiguous
+  ---
+  duration_ms: 0.351898
+  type: 'test'
+  ...
+# Subtest: M7 wrong recipient
+ok 10 - M7 wrong recipient
+  ---
+  duration_ms: 0.475792
+  type: 'test'
+  ...
+# Subtest: M8 missing recipient is unknown not empty
+ok 11 - M8 missing recipient is unknown not empty
+  ---
+  duration_ms: 0.248239
+  type: 'test'
+  ...
+# Subtest: M9 body instruction cannot mark draft sent
+ok 12 - M9 body instruction cannot mark draft sent
+  ---
+  duration_ms: 0.156649
+  type: 'test'
+  ...
+# Subtest: M10 shell URL wallet instructions are inert and omitted
+ok 13 - M10 shell URL wallet instructions are inert and omitted
+  ---
+  duration_ms: 0.234909
+  type: 'test'
+  ...
+# Subtest: M11 mailbox read is not external recipient read
+ok 14 - M11 mailbox read is not external recipient read
+  ---
+  duration_ms: 0.13729
+  type: 'test'
+  ...
+# Subtest: M12 scanner omission retained through duplicate
+ok 15 - M12 scanner omission retained through duplicate
+  ---
+  duration_ms: 1.005794
+  type: 'test'
+  ...
+# Subtest: sent record classified only as sent record
+ok 16 - sent record classified only as sent record
+  ---
+  duration_ms: 0.102952
+  type: 'test'
+  ...
+# Subtest: draft record supports draft claim only
+ok 17 - draft record supports draft claim only
+  ---
+  duration_ms: 0.068321
+  type: 'test'
+  ...
+# Subtest: processing without observed schema is unsupported
+ok 18 - processing without observed schema is unsupported
+  ---
+  duration_ms: 0.067721
+  type: 'test'
+  ...
+# Subtest: observed processing remains distinct from sent
+ok 19 - observed processing remains distinct from sent
+  ---
+  duration_ms: 0.081575
+  type: 'test'
+  ...
+# Subtest: unknown server state remains unknown
+ok 20 - unknown server state remains unknown
+  ---
+  duration_ms: 0.055325
+  type: 'test'
+  ...
+# Subtest: mailbox conflict never trusted
+ok 21 - mailbox conflict never trusted
+  ---
+  duration_ms: 0.052185
+  type: 'test'
+  ...
+# Subtest: selected id missing cannot use another record
+ok 22 - selected id missing cannot use another record
+  ---
+  duration_ms: 0.052759
+  type: 'test'
+  ...
+# Subtest: blocked evidence cannot support sent claim
+ok 23 - blocked evidence cannot support sent claim
+  ---
+  duration_ms: 0.048489
+  type: 'test'
+  ...
+# Subtest: unknown origin rejected
+ok 24 - unknown origin rejected
+  ---
+  duration_ms: 0.362228
+  type: 'test'
+  ...
+# Subtest: claim identities must be explicit
+ok 25 - claim identities must be explicit
+  ---
+  duration_ms: 0.096928
+  type: 'test'
+  ...
+# Subtest: expected recipient required for correlation
+ok 26 - expected recipient required for correlation
+  ---
+  duration_ms: 0.064751
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 67.048287
+TAP version 13
+# Subtest: M1 selected draft cannot support sent claim
+ok 1 - M1 selected draft cannot support sent claim
+  ---
+  duration_ms: 1.835428
+  type: 'test'
+  ...
+# Subtest: M2 recipient_read never proved by sent record
+ok 2 - M2 recipient_read never proved by sent record
+  ---
+  duration_ms: 0.274665
+  type: 'test'
+  ...
+# Subtest: M2 delivered never proved by sent record
+ok 3 - M2 delivered never proved by sent record
+  ---
+  duration_ms: 0.115016
+  type: 'test'
+  ...
+# Subtest: M3 empty result remains unknown
+ok 4 - M3 empty result remains unknown
+  ---
+  duration_ms: 0.119029
+  type: 'test'
+  ...
+# Subtest: M4 timeout means unavailable not email failure
+ok 5 - M4 timeout means unavailable not email failure
+  ---
+  duration_ms: 0.18206
+  type: 'test'
+  ...
+# Subtest: M5 two matching distinct IDs are ambiguous
+ok 6 - M5 two matching distinct IDs are ambiguous
+  ---
+  duration_ms: 0.143483
+  type: 'test'
+  ...
+# Subtest: M6 same ID duplicates deduplicate evidence
+ok 7 - M6 same ID duplicates deduplicate evidence
+  ---
+  duration_ms: 0.245177
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate state remains ambiguous
+ok 8 - M6 conflicting duplicate state remains ambiguous
+  ---
+  duration_ms: 0.120085
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate recipients remain ambiguous
+ok 9 - M6 conflicting duplicate recipients remain ambiguous
+  ---
+  duration_ms: 0.339575
+  type: 'test'
+  ...
+# Subtest: M7 wrong recipient
+ok 10 - M7 wrong recipient
+  ---
+  duration_ms: 0.421023
+  type: 'test'
+  ...
+# Subtest: M8 missing recipient is unknown not empty
+ok 11 - M8 missing recipient is unknown not empty
+  ---
+  duration_ms: 0.223052
+  type: 'test'
+  ...
+# Subtest: M9 body instruction cannot mark draft sent
+ok 12 - M9 body instruction cannot mark draft sent
+  ---
+  duration_ms: 0.119634
+  type: 'test'
+  ...
+# Subtest: M10 shell URL wallet instructions are inert and omitted
+ok 13 - M10 shell URL wallet instructions are inert and omitted
+  ---
+  duration_ms: 0.148779
+  type: 'test'
+  ...
+# Subtest: M11 mailbox read is not external recipient read
+ok 14 - M11 mailbox read is not external recipient read
+  ---
+  duration_ms: 0.185519
+  type: 'test'
+  ...
+# Subtest: M12 scanner omission retained through duplicate
+ok 15 - M12 scanner omission retained through duplicate
+  ---
+  duration_ms: 0.207208
+  type: 'test'
+  ...
+# Subtest: sent record classified only as sent record
+ok 16 - sent record classified only as sent record
+  ---
+  duration_ms: 0.097021
+  type: 'test'
+  ...
+# Subtest: draft record supports draft claim only
+ok 17 - draft record supports draft claim only
+  ---
+  duration_ms: 0.063312
+  type: 'test'
+  ...
+# Subtest: processing without observed schema is unsupported
+ok 18 - processing without observed schema is unsupported
+  ---
+  duration_ms: 0.057769
+  type: 'test'
+  ...
+# Subtest: observed processing remains distinct from sent
+ok 19 - observed processing remains distinct from sent
+  ---
+  duration_ms: 0.067577
+  type: 'test'
+  ...
+# Subtest: unknown server state remains unknown
+ok 20 - unknown server state remains unknown
+  ---
+  duration_ms: 0.066355
+  type: 'test'
+  ...
+# Subtest: mailbox conflict never trusted
+ok 21 - mailbox conflict never trusted
+  ---
+  duration_ms: 0.051701
+  type: 'test'
+  ...
+# Subtest: selected id missing cannot use another record
+ok 22 - selected id missing cannot use another record
+  ---
+  duration_ms: 0.049582
+  type: 'test'
+  ...
+# Subtest: blocked evidence cannot support sent claim
+ok 23 - blocked evidence cannot support sent claim
+  ---
+  duration_ms: 0.049184
+  type: 'test'
+  ...
+# Subtest: unknown origin rejected
+ok 24 - unknown origin rejected
+  ---
+  duration_ms: 0.34217
+  type: 'test'
+  ...
+# Subtest: claim identities must be explicit
+ok 25 - claim identities must be explicit
+  ---
+  duration_ms: 0.110295
+  type: 'test'
+  ...
+# Subtest: expected recipient required for correlation
+ok 26 - expected recipient required for correlation
+  ---
+  duration_ms: 0.068815
+  type: 'test'
+  ...
+# Subtest: record state cannot upgrade an unsupported processing claim
+ok 27 - record state cannot upgrade an unsupported processing claim
+  ---
+  duration_ms: 0.052802
+  type: 'test'
+  ...
+# Subtest: malformed recipients cannot be treated as an empty list
+ok 28 - malformed recipients cannot be treated as an empty list
+  ---
+  duration_ms: 0.054389
+  type: 'test'
+  ...
+# Subtest: unrecognized inherited-property state constructor remains unknown
+not ok 29 - unrecognized inherited-property state constructor remains unknown
+  ---
+  duration_ms: 0.875928
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/mail.test.mjs:39:78'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+    - 'UNVERIFIED'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'UNVERIFIED'
+  actual: 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/mail.test.mjs:41:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: unrecognized inherited-property state __proto__ remains unknown
+not ok 30 - unrecognized inherited-property state __proto__ remains unknown
+  ---
+  duration_ms: 0.231015
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/mail.test.mjs:39:78'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+    - 'UNVERIFIED'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'UNVERIFIED'
+  actual: 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/mail.test.mjs:41:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: unrecognized inherited-property state toString remains unknown
+not ok 31 - unrecognized inherited-property state toString remains unknown
+  ---
+  duration_ms: 0.165511
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/mail.test.mjs:39:78'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+    - 'UNVERIFIED'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'UNVERIFIED'
+  actual: 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/mail.test.mjs:41:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: unrecognized inherited-property state hasOwnProperty remains unknown
+not ok 32 - unrecognized inherited-property state hasOwnProperty remains unknown
+  ---
+  duration_ms: 0.122121
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/mail.test.mjs:39:78'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+    - 'UNVERIFIED'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'UNVERIFIED'
+  actual: 'NOT_SUPPORTED_BY_SELECTED_RECORD'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/mail.test.mjs:41:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 28
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 79.52781
+TAP version 13
+# Subtest: M1 selected draft cannot support sent claim
+ok 1 - M1 selected draft cannot support sent claim
+  ---
+  duration_ms: 1.562285
+  type: 'test'
+  ...
+# Subtest: M2 recipient_read never proved by sent record
+ok 2 - M2 recipient_read never proved by sent record
+  ---
+  duration_ms: 0.255271
+  type: 'test'
+  ...
+# Subtest: M2 delivered never proved by sent record
+ok 3 - M2 delivered never proved by sent record
+  ---
+  duration_ms: 0.111256
+  type: 'test'
+  ...
+# Subtest: M3 empty result remains unknown
+ok 4 - M3 empty result remains unknown
+  ---
+  duration_ms: 0.310731
+  type: 'test'
+  ...
+# Subtest: M4 timeout means unavailable not email failure
+ok 5 - M4 timeout means unavailable not email failure
+  ---
+  duration_ms: 0.192935
+  type: 'test'
+  ...
+# Subtest: M5 two matching distinct IDs are ambiguous
+ok 6 - M5 two matching distinct IDs are ambiguous
+  ---
+  duration_ms: 0.142644
+  type: 'test'
+  ...
+# Subtest: M6 same ID duplicates deduplicate evidence
+ok 7 - M6 same ID duplicates deduplicate evidence
+  ---
+  duration_ms: 0.220628
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate state remains ambiguous
+ok 8 - M6 conflicting duplicate state remains ambiguous
+  ---
+  duration_ms: 0.111782
+  type: 'test'
+  ...
+# Subtest: M6 conflicting duplicate recipients remain ambiguous
+ok 9 - M6 conflicting duplicate recipients remain ambiguous
+  ---
+  duration_ms: 0.348295
+  type: 'test'
+  ...
+# Subtest: M7 wrong recipient
+ok 10 - M7 wrong recipient
+  ---
+  duration_ms: 0.430286
+  type: 'test'
+  ...
+# Subtest: M8 missing recipient is unknown not empty
+ok 11 - M8 missing recipient is unknown not empty
+  ---
+  duration_ms: 0.200109
+  type: 'test'
+  ...
+# Subtest: M9 body instruction cannot mark draft sent
+ok 12 - M9 body instruction cannot mark draft sent
+  ---
+  duration_ms: 0.111802
+  type: 'test'
+  ...
+# Subtest: M10 shell URL wallet instructions are inert and omitted
+ok 13 - M10 shell URL wallet instructions are inert and omitted
+  ---
+  duration_ms: 0.855335
+  type: 'test'
+  ...
+# Subtest: M11 mailbox read is not external recipient read
+ok 14 - M11 mailbox read is not external recipient read
+  ---
+  duration_ms: 0.152257
+  type: 'test'
+  ...
+# Subtest: M12 scanner omission retained through duplicate
+ok 15 - M12 scanner omission retained through duplicate
+  ---
+  duration_ms: 0.226716
+  type: 'test'
+  ...
+# Subtest: sent record classified only as sent record
+ok 16 - sent record classified only as sent record
+  ---
+  duration_ms: 0.084823
+  type: 'test'
+  ...
+# Subtest: draft record supports draft claim only
+ok 17 - draft record supports draft claim only
+  ---
+  duration_ms: 0.059592
+  type: 'test'
+  ...
+# Subtest: processing without observed schema is unsupported
+ok 18 - processing without observed schema is unsupported
+  ---
+  duration_ms: 0.057319
+  type: 'test'
+  ...
+# Subtest: observed processing remains distinct from sent
+ok 19 - observed processing remains distinct from sent
+  ---
+  duration_ms: 0.072171
+  type: 'test'
+  ...
+# Subtest: unknown server state remains unknown
+ok 20 - unknown server state remains unknown
+  ---
+  duration_ms: 0.05449
+  type: 'test'
+  ...
+# Subtest: mailbox conflict never trusted
+ok 21 - mailbox conflict never trusted
+  ---
+  duration_ms: 0.05195
+  type: 'test'
+  ...
+# Subtest: selected id missing cannot use another record
+ok 22 - selected id missing cannot use another record
+  ---
+  duration_ms: 0.048659
+  type: 'test'
+  ...
+# Subtest: blocked evidence cannot support sent claim
+ok 23 - blocked evidence cannot support sent claim
+  ---
+  duration_ms: 0.047474
+  type: 'test'
+  ...
+# Subtest: unknown origin rejected
+ok 24 - unknown origin rejected
+  ---
+  duration_ms: 0.387692
+  type: 'test'
+  ...
+# Subtest: claim identities must be explicit
+ok 25 - claim identities must be explicit
+  ---
+  duration_ms: 0.103044
+  type: 'test'
+  ...
+# Subtest: expected recipient required for correlation
+ok 26 - expected recipient required for correlation
+  ---
+  duration_ms: 0.068561
+  type: 'test'
+  ...
+# Subtest: record state cannot upgrade an unsupported processing claim
+ok 27 - record state cannot upgrade an unsupported processing claim
+  ---
+  duration_ms: 0.052121
+  type: 'test'
+  ...
+# Subtest: malformed recipients cannot be treated as an empty list
+ok 28 - malformed recipients cannot be treated as an empty list
+  ---
+  duration_ms: 0.052194
+  type: 'test'
+  ...
+# Subtest: unrecognized inherited-property state constructor remains unknown
+ok 29 - unrecognized inherited-property state constructor remains unknown
+  ---
+  duration_ms: 0.05793
+  type: 'test'
+  ...
+# Subtest: unrecognized inherited-property state __proto__ remains unknown
+ok 30 - unrecognized inherited-property state __proto__ remains unknown
+  ---
+  duration_ms: 0.038744
+  type: 'test'
+  ...
+# Subtest: unrecognized inherited-property state toString remains unknown
+ok 31 - unrecognized inherited-property state toString remains unknown
+  ---
+  duration_ms: 0.036788
+  type: 'test'
+  ...
+# Subtest: unrecognized inherited-property state hasOwnProperty remains unknown
+ok 32 - unrecognized inherited-property state hasOwnProperty remains unknown
+  ---
+  duration_ms: 0.035809
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 67.59061
+
+Trailing whitespace normalized for Git; original local output retained in excluded private-evidence/tdd-raw/.

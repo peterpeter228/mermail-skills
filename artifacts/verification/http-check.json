@@ -1,0 +1,36 @@
+[
+  {
+    "path": "/report.html",
+    "status": 200,
+    "bytes": 7229,
+    "title_present": true,
+    "csp": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  {
+    "path": "/report.json",
+    "status": 200,
+    "bytes": 3821,
+    "title_present": true,
+    "csp": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  {
+    "path": "/../../private-evidence/avalanche-live-sample.json",
+    "status": 403
+  },
+  {
+    "path": "/AGENTS.md",
+    "status": 404
+  },
+  {
+    "path": "/%2e%2e/README.md",
+    "status": 403
+  },
+  {
+    "path": "/report.html",
+    "capture": "after independent-review fixes",
+    "status": 200,
+    "bytes": 6911,
+    "mail_blocked": true,
+    "avalanche_live": true
+  }
+]

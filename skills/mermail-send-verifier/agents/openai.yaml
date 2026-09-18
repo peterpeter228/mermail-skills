@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Send Verifier"
+  short_description: "Check completion claims against mail record evidence"
+  default_prompt: "Use $mermail-send-verifier to compare this completion claim with read-only Mermail record evidence."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp"

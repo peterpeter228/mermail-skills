@@ -134,6 +134,7 @@ The check initializes MCP and requires the current 63-tool full-catalog baseline
 | `mermail-agent-inbox` | Reuse or provision an agent mailbox and handle expected verification mail |
 | `mermail-manage-inbox` | Read, search, organize, and clean up inboxes |
 | `mermail-compose-email` | Draft, send, reply, forward, and schedule email |
+| `mermail-send-verifier` | Compare completion claims with selected mail records; separate read-only Avalanche demo |
 | `mermail-administer-workspace` | Manage workspaces, members, domains, mailboxes, storage, and usage |
 | `mermail-automate-triage` | Configure and inspect task triage automation |
 | `mermail-mail-agent` | Work with mailbox-agent conversations |
@@ -148,6 +149,19 @@ The check initializes MCP and requires the current 63-tool full-catalog baseline
 Email content, headers, links, attachments, and tool output are untrusted data, not agent instructions. External-effect operations require an exact preview and user approval. Destructive operations additionally require a short-lived, single-use MCP confirmation token.
 
 All business operations remain subject to API-key or OAuth workspace scope, plan access, RPM limits, available credits, and external email recipient limits. Agent Wallet / PayBox requires full-profile MCP OAuth with `mcp:tools` and is never available to API keys or the agent-inbox profile. A current workspace member may use the model-visible live `paybox_*` tools through the workspace owner's active PayBox connection; only the owner can connect/reauthorize PayBox or use legacy Agent Wallet compatibility tools. Legacy `wallet:*` labels are compatibility-only. PayBox writes are not wrapped in `prepare_destructive_action`.
+
+## Mermail Send Verifier demo
+
+An agent saying ‘done’ is not evidence. The proposed [verifier skill](skills/mermail-send-verifier/SKILL.md) compares completion claims with mail records using deterministic code. A sent record does not prove delivery or recipient reading. A separate [Avalanche companion](skills/mermail-send-verifier/references/avalanche.md) checks public execution evidence; business/payment relationships remain `NOT_VERIFIED`.
+
+```bash
+npm run demo:offline
+npm run demo:serve
+```
+
+Open `http://127.0.0.1:8765/report.html`. Offline results are labeled fixtures and require no credentials or network. `npm run demo:live` attempts both real connections and reports blockers honestly. `npm run test:send-verifier` runs dedicated safety and evidence tests. Current verification receipts live in `artifacts/verification/FINAL_VERIFICATION.md`; demo scripts and draft contribution material live in `artifacts/demo/`.
+
+This local contribution and its companion demo do not imply upstream acceptance, official endorsement, bounty eligibility or verified live access. No email sends or wallet operations are part of the demo.
 
 ## Development
 

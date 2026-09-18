@@ -1,0 +1,52 @@
+{
+  "case_id": "avalanche-execution",
+  "claim_type": "transaction_execution",
+  "network": "mainnet",
+  "tx_hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+  "evidence_source": "LIVE",
+  "captured_at": "2026-09-18T05:20:14.045Z",
+  "assessment": "RECEIPT_SUCCESS_OBSERVED",
+  "business_state": "NOT_VERIFIED",
+  "notice": "PUBLIC THIRD-PARTY TRANSACTION FOR DEMO ONLY. THIS IS NOT THE USER'S PAYMENT.",
+  "observed_fields": {
+    "chain_id": "0xa86a",
+    "transaction": {
+      "hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+      "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
+      "blockNumber": "0x5b2345c",
+      "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+      "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
+      "value": "0x0",
+      "nonce": "0x38ad0"
+    },
+    "receipt": {
+      "transactionHash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+      "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
+      "blockNumber": "0x5b2345c",
+      "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+      "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
+      "status": "0x1"
+    },
+    "block": {
+      "hash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
+      "number": "0x5b2345c"
+    }
+  },
+  "evidence_refs": [
+    "rpc:mainnet:eth_chainId:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+    "rpc:mainnet:eth_getTransactionByHash:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+    "rpc:mainnet:eth_getTransactionReceipt:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+    "rpc:mainnet:eth_getBlockByNumber:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7"
+  ],
+  "limitations": [
+    "Execution evidence does not establish a business or payment relationship.",
+    "No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented."
+  ],
+  "discovery": {
+    "recent_block_window": 5,
+    "requested_block_number": "0x5b2345c",
+    "block_hash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
+    "call_budget": 16,
+    "calls_used": 7
+  }
+}

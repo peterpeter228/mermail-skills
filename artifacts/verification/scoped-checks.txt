@@ -1,0 +1,5 @@
+$ git diff --check
+ACTUAL_EXIT_CODE=0
+$ rg -n TODO|FIXME|PLACEHOLDER|REPLACE_ME|TBD skills/mermail-send-verifier demo/avalanche artifacts/demo tests/send-verifier
+ACTUAL_EXIT_CODE=1
+rg exit 1 = no unfinished-placeholder matches.

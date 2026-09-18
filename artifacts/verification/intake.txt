@@ -1,0 +1,14 @@
+$ git status --short --branch
+## feat/mermail-send-verifier-avalanche-demo
+?? AGENTS.md
+?? artifacts/
+$ git rev-parse HEAD
+b6b98f3bf3d27373f80b403a84dcba370af8b882
+$ node --version
+v22.22.0
+$ npm --version
+11.17.0
+$ git --version
+git version 2.43.0
+$ codex --version
+codex-cli 0.155.0

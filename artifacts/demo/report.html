@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>Mermail Send Verifier</title><style>
+:root{color-scheme:dark;--bg:#101925;--panel:#1a2838;--line:#3d5369;--text:#edf5fd;--muted:#b3c4d7;--accent:#86e1d7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 system-ui,sans-serif}main{max-width:1540px;margin:auto;padding:44px 36px}header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:28px}.eyebrow{font-size:12px;letter-spacing:.17em;color:var(--accent);font-weight:700}h1{font-size:clamp(30px,4vw,54px);line-height:1.12;margin:14px 0}header p{color:var(--muted);margin:12px 0}.principle{font-size:24px;color:var(--text)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0}h2{font-size:24px;min-height:72px;margin:14px 0}.source{font-size:13px;font-weight:700;color:var(--accent)}.assessment{padding:14px;background:#0d1d2a;border-left:4px solid var(--accent);overflow-wrap:anywhere;font-size:17px;font-weight:750}dt{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-top:20px}dd{margin:5px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,monospace;margin:0}.warning{border-top:1px solid var(--line);padding-top:20px;color:#ffe3a1;font-size:13px;font-weight:700}footer{margin-top:24px;color:var(--muted);font-size:14px}@media(max-width:1000px){.grid{grid-template-columns:1fr}h2{min-height:0}main{padding:24px 18px}}@media print{body{background:white;color:black}.grid{display:block}.card{break-inside:avoid;margin:14px 0;background:white;color:black}.assessment{background:#eee;color:black}}
+</style></head><body><main><header><div class="eyebrow">COMPLETION CLAIM → OBSERVED EVIDENCE</div><h1>Mermail Send Verifier</h1><p>Evidence-based completion checks for AI agents</p><p class="principle">An agent saying ‘done’ is not evidence.</p><p>Mode: live · Report generated: 2026-09-18T05:20:22.474Z</p></header><div class="grid"><section class="card"><div class="eyebrow">01 / EVIDENCE LAYER</div><h2>Mail Record</h2><p class="source">SOURCE · BLOCKED</p><div class="assessment">EVIDENCE_UNAVAILABLE</div><dl><dt>Case</dt><dd><pre>mail-live</pre></dd><dt>Claim</dt><dd><pre>sent</pre></dd><dt>Mailbox</dt><dd><pre>unselected</pre></dd><dt>Selected record</dt><dd><pre>UNKNOWN</pre></dd><dt>Expected recipient</dt><dd><pre>UNKNOWN</pre></dd><dt>Record status</dt><dd><pre>UNVERIFIED</pre></dd><dt>Capture time</dt><dd><pre>2026-09-18T05:16:16.457Z</pre></dd><dt>Observed evidence</dt><dd><pre>{}</pre></dd><dt>Evidence references</dt><dd><pre>[
+  &quot;artifacts/verification/mermail-live.json&quot;
+]</pre></dd><dt>Limitations</dt><dd><pre>[
+  &quot;No selected live mail record is available.&quot;,
+  &quot;No live email response field mapping is verified.&quot;,
+  &quot;A Mermail record does not prove delivery or external recipient reading.&quot;,
+  &quot;Evidence unavailable; this is not evidence that an email failed.&quot;
+]</pre></dd></dl></section><section class="card"><div class="eyebrow">02 / EVIDENCE LAYER</div><h2>Avalanche Execution</h2><p class="source">SOURCE · LIVE</p><div class="assessment">RECEIPT_SUCCESS_OBSERVED</div><dl><dt>Case</dt><dd><pre>avalanche-execution</pre></dd><dt>Claim</dt><dd><pre>transaction_execution</pre></dd><dt>Network</dt><dd><pre>mainnet</pre></dd><dt>Transaction</dt><dd><pre>0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7</pre></dd><dt>Capture time</dt><dd><pre>2026-09-18T05:20:14.363Z</pre></dd><dt>Observed evidence</dt><dd><pre>{
+  &quot;chain_id&quot;: &quot;0xa86a&quot;,
+  &quot;transaction&quot;: {
+    &quot;hash&quot;: &quot;0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;,
+    &quot;blockHash&quot;: &quot;0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d&quot;,
+    &quot;blockNumber&quot;: &quot;0x5b2345c&quot;,
+    &quot;from&quot;: &quot;0x7816cb1110be7b53c4464350b392ad4416819f8b&quot;,
+    &quot;to&quot;: &quot;0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39&quot;,
+    &quot;value&quot;: &quot;0x0&quot;,
+    &quot;nonce&quot;: &quot;0x38ad0&quot;
+  },
+  &quot;receipt&quot;: {
+    &quot;transactionHash&quot;: &quot;0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;,
+    &quot;blockHash&quot;: &quot;0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d&quot;,
+    &quot;blockNumber&quot;: &quot;0x5b2345c&quot;,
+    &quot;from&quot;: &quot;0x7816cb1110be7b53c4464350b392ad4416819f8b&quot;,
+    &quot;to&quot;: &quot;0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39&quot;,
+    &quot;status&quot;: &quot;0x1&quot;
+  },
+  &quot;block&quot;: {
+    &quot;hash&quot;: &quot;0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d&quot;,
+    &quot;number&quot;: &quot;0x5b2345c&quot;
+  }
+}</pre></dd><dt>Evidence references</dt><dd><pre>[
+  &quot;rpc:mainnet:eth_chainId:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;,
+  &quot;rpc:mainnet:eth_getTransactionByHash:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;,
+  &quot;rpc:mainnet:eth_getTransactionReceipt:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;,
+  &quot;rpc:mainnet:eth_getBlockByNumber:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7&quot;
+]</pre></dd><dt>Limitations</dt><dd><pre>[
+  &quot;Execution evidence does not establish a business or payment relationship.&quot;,
+  &quot;No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented.&quot;
+]</pre></dd></dl></section><section class="card"><div class="eyebrow">03 / EVIDENCE LAYER</div><h2>Business / Payment Relationship</h2><p class="source">SOURCE · NOT_RUN</p><div class="assessment">NOT_VERIFIED</div><dl><dt>Case</dt><dd><pre>business-relationship</pre></dd><dt>Claim</dt><dd><pre>Payment or invoice relationship</pre></dd><dt>Capture time</dt><dd><pre>UNKNOWN</pre></dd><dt>Observed evidence</dt><dd><pre>UNKNOWN</pre></dd><dt>Evidence references</dt><dd><pre>[]</pre></dd><dt>Limitations</dt><dd><pre>[
+  &quot;No invoice settlement, customer or wallet identity, token ownership, finality guarantee, bridging, signing, or transaction submission is implemented in v1.&quot;
+]</pre></dd></dl><p class="warning">PUBLIC THIRD-PARTY TRANSACTION FOR DEMO ONLY. THIS IS NOT THE USER&#39;S PAYMENT.</p></section></div><footer>Draft is not sent. A sent record does not establish delivery or reading. Execution success does not establish a payment relationship.</footer></main></body></html>

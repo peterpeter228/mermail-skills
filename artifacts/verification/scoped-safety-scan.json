@@ -1,0 +1,21 @@
+{
+  "scanned_files": 58,
+  "scanned_roots": [
+    "skills/mermail-send-verifier",
+    "demo/avalanche",
+    "artifacts/demo",
+    "artifacts/verification",
+    "tests/send-verifier"
+  ],
+  "patterns": [
+    "credential_prefix",
+    "private_key_pem",
+    "bearer_literal"
+  ],
+  "secret_findings": [],
+  "validator_unchanged": true,
+  "tool_ownership_unchanged": true,
+  "upstream_scenarios_preserved": true,
+  "private_evidence_ignored": true,
+  "private_evidence_tracked": false
+}
