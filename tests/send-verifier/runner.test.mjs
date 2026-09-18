@@ -24,3 +24,10 @@ test('live runner preserves mail observation when chain transport throws',async(
  assert.equal(report.chain.evidence_source,'BLOCKED');
  assert.equal(report.chain.assessment,'RPC_UNAVAILABLE');
 });
+test('live runner passes pinned target identity to fresh read collector, never a saved response',async()=>{
+ const selection={mailbox_id:'fixture-mailbox',selected_email_id:'fixture-message',expected_recipient:'self@example.invalid'};
+ let supplied;
+ const fixtureChain=(await runDemo('offline',{write:false})).chain;
+ await runDemo('live',{write:false,mailSelection:selection,collectMail:async input=>{supplied=input;return {claim:{case_id:'read',...selection,claim_type:'sent',evidence_source:'BLOCKED'},evidence:{records:[],error:'blocked'},connection:{selected_record:'BLOCKED'}};},collectSample:async()=>({...fixtureChain,tx_hash:null})});
+ assert.deepEqual(supplied,{selection});
+});

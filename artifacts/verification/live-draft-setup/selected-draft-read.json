@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-09-18T05:34:09.353Z",
+  "tool": "get_email",
+  "arguments": {
+    "mailboxId": "d6f5a492-10b8-405e-9879-48599ce2a1bf",
+    "emailId": "634b3da8-b3e1-46bf-b6e0-3080629582d9",
+    "query": {
+      "metadata_only": true,
+      "agent_safe_content": true,
+      "require_scan_status": "clean"
+    }
+  },
+  "response": {
+    "id": "634b3da8-b3e1-46bf-b6e0-3080629582d9",
+    "subject": "[SV-LIVE-DEMO] Agent completion verification",
+    "sender": "send-verifier-demo@mermail.app",
+    "recipient": "send-verifier-demo@mermail.app",
+    "cc": "[OMITTED]",
+    "bcc": "[OMITTED]",
+    "date": "2026-09-18T05:33:30.539Z",
+    "read": false,
+    "starred": "[OMITTED]",
+    "is_urgent": "[OMITTED]",
+    "category": "[OMITTED]",
+    "in_reply_to": "[OMITTED]",
+    "email_references": "[OMITTED]",
+    "thread_id": "[OMITTED]",
+    "folder_id": "draft",
+    "delivery_status": null,
+    "message_id": null,
+    "scan_status": null,
+    "sender_authentication": {
+      "status": "unknown",
+      "spf": "[OMITTED]",
+      "dkim": "[OMITTED]",
+      "dmarc": "[OMITTED]",
+      "inbound_provider": "[OMITTED]",
+      "reason": "[OMITTED]"
+    },
+    "content_omitted": true,
+    "content_omission_reason": "scan_status_not_clean",
+    "agent_safe_content": "[OMITTED]",
+    "attachment_count": "[OMITTED]",
+    "custom_labels": []
+  }
+}

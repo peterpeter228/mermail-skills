@@ -1,9 +1,5 @@
 # Mermail Send Verifier — verification
 
-## Previous implementation capture
-
-The following matrix is historical, before the user-authorized dedicated mailbox and draft setup. Original receipt bytes, including the 106-test result and zero-mailbox response, are preserved in [history/pre-live-draft/](history/pre-live-draft/README.md). Its relative latest-receipt links may now point at newer captures; use the snapshot for historical values. Current-session acceptance is recorded separately below.
-
 Captured 2026-09-18 in `/root/code/mermail-skills`, branch `feat/mermail-send-verifier-avalanche-demo`, base HEAD `b6b98f3bf3d27373f80b403a84dcba370af8b882`. Node v22.22.0, npm 11.17.0, Git 2.43.0, Codex CLI 0.155.0. Verification was performed before the authorized task commit; Git publication results are reported separately. The pre-existing untracked `AGENTS.md` was preserved.
 
 IMPLEMENTED: deterministic mail classifier, conservative normalizer, native Codex OAuth read adapter, independent Avalanche companion, static report, isolated local server, 4 npm runners, skill registration and six demo documents. Core classifications require no LLM API.
@@ -45,32 +41,3 @@ PUBLIC THIRD-PARTY TRANSACTION FOR DEMO ONLY. THIS IS NOT THE USER'S PAYMENT.
 SAFE TO DEMO: YES, as a truthfully labeled fixture or mixed-evidence demonstration. Full live Mermail record verification is not complete. Missing email evidence is not evidence of a failed email.
 
 Reproduce: `npm run demo:offline` (fully local), or `npm run demo:live` (current OAuth and network required), then `npm run demo:serve`. Open `http://127.0.0.1:8765/report.html`. With Windows Edge and SSH to Ubuntu, use an SSH local port forward for port 8765; the service intentionally binds Ubuntu loopback only.
-
-## Current authorized demo setup — 2026-09-18
-
-Checkout HEAD: `d6dc5cca7ddfb79b1890cbf1b7d5bd3e02c06635`. The user explicitly authorized exactly one dedicated hosted demo mailbox and one synthetic self-addressed draft. This setup authorization does not authorize sending, further drafts, wallets, signing, publication, or a commit/push.
-
-| Requirement | Status | Evidence | Notes |
-| --- | --- | --- | --- |
-| Current pre-change validator | PASS | [baseline.txt](live-draft-setup/baseline.txt) | Exit 0: 17 skills and 71 business tools. |
-| Current pre-change feature regression | PASS | [baseline.txt](live-draft-setup/baseline.txt) | 106 tests passed; this is the baseline, not a post-change count. |
-| Authorized setup and selected draft | PASS | [mailbox-confirmed.json](live-draft-setup/mailbox-confirmed.json), [selected-draft-read.json](live-draft-setup/selected-draft-read.json) | Dedicated mailbox exists; independent safe metadata read returned selected ID, scalar self-recipient and `folder_id: draft`. |
-| Observed live record field mapping | PASS | [mermail-field-map.md](mermail-field-map.md), [selected-draft-read.json](live-draft-setup/selected-draft-read.json) | Draft mapping observed; mailbox binding is request scope, not an invented response field. Scan status null and body omitted remain limitations. |
-| Current Mermail initialize/catalog/list/read | PASS | [mermail-live.json](mermail-live.json) | Fresh native OAuth connection; 85 tools; one mailbox; 2 bounded read calls (`list_mailboxes`, `get_email`), selected record PASS. |
-| Current live report / deterministic mail assessment | PASS | [live-demo.txt](live-draft-setup/live-demo.txt), [report.json](../demo/report.json) | LIVE `DRAFT_RECORD_FOUND`; sent claim assessed `NOT_SUPPORTED_BY_SELECTED_RECORD`. Body omission remains explicit. |
-| Current Avalanche chain ID / tx / receipt / block / repeat | PASS | [avalanche-live.json](avalanche-live.json), [report.json](../demo/report.json) | Mainnet `0xa86a`; LIVE `RECEIPT_SUCCESS_OBSERVED`, matching identities and independent reread; execution only. |
-| Current business/payment relationship | NOT_RUN | [report.json](../demo/report.json) | `NOT_VERIFIED`; no payment relationship implementation. |
-| Current generated HTML / HTTP isolation | PASS | [http-check.json](live-draft-setup/http-check.json), [live-demo-final.txt](live-draft-setup/live-demo-final.txt) | Fresh HTML/JSON HTTP 200 with draft assessment; private-evidence and repository traversal HTTP 403. |
-| Post-change mail/chain/report/runner regression | PASS | [feature-tests.txt](live-draft-setup/feature-tests.txt) | 123 tests passed, 0 failed, 0 skipped; exit 0. Historical baseline remains 106. |
-| Current repo validator | PASS | [repo-validator.txt](live-draft-setup/repo-validator.txt) | 17 skills, 71 business tools; validator unchanged. |
-| Current diff / scoped secret scan | PASS | [diff-check.txt](live-draft-setup/diff-check.txt), [secret-scan.json](live-draft-setup/secret-scan.json) | Diff check exit 0; 83 scoped files, zero findings. Private evidence ignored/untracked; Avalanche source unchanged; no commit this task. |
-| Current independent review | PASS | [independent-review.md](live-draft-setup/independent-review.md), [review-manifest.json](live-draft-setup/review-manifest.json) | Independent audit found no demonstrated defects; all 6 code/test hashes matched. Saved capture replay was explicitly RECORDED, never LIVE. |
-| Current write/no-send audit | PASS | [write-audit.json](live-draft-setup/write-audit.json), [create-mailbox.json](live-draft-setup/create-mailbox.json), [save-draft.json](live-draft-setup/save-draft.json) | Exactly one `create_mailbox`, one `save_draft`, zero `send_email`, zero wallet calls. Creation receipt corroborated by later mailbox and selected-record reads. |
-
-The live runner reads only the identity pin in `private-evidence/mermail-demo-target.json`; a safe identity copy is [demo-target.json](live-draft-setup/demo-target.json). It does not create mailboxes, save drafts or send messages. Re-running `npm run demo:live` performs read-only verification of that selected demo record. The original zero-mailbox blocker is closed for this selected draft only; sent, processing, delivery and recipient-read evidence remain unverified/unsupported as documented.
-
-Current delivery: IMPLEMENTED; LIVE VERIFIED for this selected hosted draft and independent public Avalanche execution. SAFE TO DEMO: YES. Remaining limitations: omitted body/unknown scan status; no observed sent or processing record, delivery or recipient reading; business/payment remains NOT_VERIFIED. No new commit, push, PR or publication is part of this setup task.
-
-## Publication follow-up authorization
-
-After completing the restricted setup and its independent review, the user explicitly requested committing and pushing these results to the existing personal fork branch for external review. This supersedes the setup phase's no-commit/no-push restriction for this publication step only. It grants no further Mermail writes, sends, wallet operations, or pull-request creation. The reviewed source/test hashes remain unchanged.

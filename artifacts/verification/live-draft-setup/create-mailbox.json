@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-09-18T05:32:59.749Z",
+  "tool": "create_mailbox",
+  "response": {
+    "id": "send-verifier-demo@mermail.app",
+    "public_id": "d6f5a492-10b8-405e-9879-48599ce2a1bf",
+    "workspace_id": "[OMITTED]",
+    "email": "send-verifier-demo@mermail.app",
+    "name": "Send Verifier Demo",
+    "email_domain_id": "[OMITTED]",
+    "inbound_provider": "[OMITTED]",
+    "outbound_provider": "[OMITTED]",
+    "settings": {
+      "fromName": "[OMITTED]",
+      "autoReply": {
+        "enabled": false,
+        "message": "",
+        "subject": ""
+      },
+      "signature": {
+        "text": "[OMITTED]",
+        "enabled": false
+      },
+      "agentInbox": {
+        "mode": "verification",
+        "automationsEnabled": false
+      },
+      "forwarding": {
+        "email": "",
+        "enabled": false
+      },
+      "agentAutoResponse": {
+        "requireApproval": "[OMITTED]"
+      },
+      "emailTriagePolicyRevision": "[OMITTED]"
+    },
+    "disabled_at": "[OMITTED]",
+    "disabled_reason": "[OMITTED]",
+    "can_receive": true,
+    "receiving_status": "[OMITTED]",
+    "welcome_onboarding_status": "[OMITTED]"
+  }
+}

@@ -2,70 +2,81 @@
   "title": "Mermail Send Verifier",
   "subtitle": "Evidence-based completion checks for AI agents",
   "mode": "live",
-  "captured_at": "2026-09-18T05:20:22.474Z",
+  "captured_at": "2026-09-18T05:36:35.928Z",
   "mail": {
     "case_id": "mail-live",
     "claim_type": "sent",
-    "assessment": "EVIDENCE_UNAVAILABLE",
-    "evidence_source": "BLOCKED",
-    "captured_at": "2026-09-18T05:16:16.457Z",
-    "observed_fields": {},
+    "assessment": "NOT_SUPPORTED_BY_SELECTED_RECORD",
+    "evidence_source": "LIVE",
+    "captured_at": "2026-09-18T05:36:30.461Z",
+    "observed_fields": {
+      "id": "634b3da8-b3e1-46bf-b6e0-3080629582d9",
+      "state": "draft",
+      "recipients": [
+        "send-verifier-demo@mermail.app"
+      ],
+      "mailbox_read": false,
+      "body_omitted": true
+    },
     "limitations": [
-      "No selected live mail record is available.",
-      "No live email response field mapping is verified.",
+      "Mailbox identity comes from confirmed list_mailboxes identity and the successful scoped get_email request, not a mailbox field in the email response.",
+      "Mermail omitted body content: scan_status_not_clean; scanner was not bypassed.",
+      "Body content is omitted; scanner state and recipient state are unknown.",
+      "Mailbox read state is not external recipient read evidence; delivery is not verified.",
       "A Mermail record does not prove delivery or external recipient reading.",
-      "Evidence unavailable; this is not evidence that an email failed."
+      "Body content omitted by safety scanning or metadata-only collection; scanner was not bypassed."
     ],
     "evidence_refs": [
       "artifacts/verification/mermail-live.json"
     ],
-    "mailbox_id": "unselected",
-    "selected_email_id": null,
-    "expected_recipient": null,
-    "record_status": "UNVERIFIED"
+    "mailbox_id": "d6f5a492-10b8-405e-9879-48599ce2a1bf",
+    "selected_email_id": "634b3da8-b3e1-46bf-b6e0-3080629582d9",
+    "expected_recipient": "send-verifier-demo@mermail.app",
+    "record_status": "DRAFT_RECORD_FOUND"
   },
   "chain": {
     "case_id": "avalanche-execution",
     "claim_type": "transaction_execution",
     "assessment": "RECEIPT_SUCCESS_OBSERVED",
     "evidence_source": "LIVE",
-    "captured_at": "2026-09-18T05:20:14.363Z",
+    "captured_at": "2026-09-18T05:36:35.835Z",
     "observed_fields": {
       "chain_id": "0xa86a",
       "transaction": {
-        "hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-        "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-        "blockNumber": "0x5b2345c",
-        "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+        "hash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+        "blockHash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+        "blockNumber": "0x5b23812",
+        "from": "0xea5b25febe1a85cf4aa3741475c7c0031e1d0b6a",
         "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
         "value": "0x0",
-        "nonce": "0x38ad0"
+        "nonce": "0x38a51"
       },
       "receipt": {
-        "transactionHash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-        "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-        "blockNumber": "0x5b2345c",
-        "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+        "transactionHash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+        "blockHash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+        "blockNumber": "0x5b23812",
+        "from": "0xea5b25febe1a85cf4aa3741475c7c0031e1d0b6a",
         "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
         "status": "0x1"
       },
       "block": {
-        "hash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-        "number": "0x5b2345c"
+        "hash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+        "number": "0x5b23812"
       }
     },
     "limitations": [
       "Execution evidence does not establish a business or payment relationship.",
-      "No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented."
+      "No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented.",
+      "Public sample independently reread after bounded discovery."
     ],
     "evidence_refs": [
-      "rpc:mainnet:eth_chainId:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-      "rpc:mainnet:eth_getTransactionByHash:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-      "rpc:mainnet:eth_getTransactionReceipt:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-      "rpc:mainnet:eth_getBlockByNumber:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7"
+      "rpc:mainnet:eth_chainId:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+      "rpc:mainnet:eth_getTransactionByHash:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+      "rpc:mainnet:eth_getTransactionReceipt:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+      "rpc:mainnet:eth_getBlockByNumber:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883"
     ],
     "network": "mainnet",
-    "tx_hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+    "tx_hash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
     "business_state": "NOT_VERIFIED"
   },
   "business": {

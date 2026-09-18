@@ -1,0 +1,109 @@
+TAP version 13
+# Subtest: offline runner needs no network or credentials and all sources are FIXTURE
+ok 1 - offline runner needs no network or credentials and all sources are FIXTURE
+  ---
+  duration_ms: 4.000263
+  type: 'test'
+  ...
+# Subtest: unknown runner mode rejected
+ok 2 - unknown runner mode rejected
+  ---
+  duration_ms: 0.482368
+  type: 'test'
+  ...
+# Subtest: live runner preserves successful chain evidence when mail collection throws
+ok 3 - live runner preserves successful chain evidence when mail collection throws
+  ---
+  duration_ms: 0.99642
+  type: 'test'
+  ...
+# Subtest: live runner preserves mail observation when chain transport throws
+ok 4 - live runner preserves mail observation when chain transport throws
+  ---
+  duration_ms: 0.343413
+  type: 'test'
+  ...
+# Subtest: live runner passes pinned target identity to fresh read collector, never a saved response
+not ok 5 - live runner passes pinned target identity to fresh read collector, never a saved response
+  ---
+  duration_ms: 3.717695
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/runner.test.mjs:27:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + undefined
+    - {
+    -   selection: {
+    -     expected_recipient: 'self@example.invalid',
+    -     mailbox_id: 'fixture-mailbox',
+    -     selected_email_id: 'fixture-message'
+    -   }
+    - }
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    selection:
+      mailbox_id: 'fixture-mailbox'
+      selected_email_id: 'fixture-message'
+      expected_recipient: 'self@example.invalid'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/runner.test.mjs:32:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 68.707366
+TAP version 13
+# Subtest: offline runner needs no network or credentials and all sources are FIXTURE
+ok 1 - offline runner needs no network or credentials and all sources are FIXTURE
+  ---
+  duration_ms: 4.110322
+  type: 'test'
+  ...
+# Subtest: unknown runner mode rejected
+ok 2 - unknown runner mode rejected
+  ---
+  duration_ms: 0.514841
+  type: 'test'
+  ...
+# Subtest: live runner preserves successful chain evidence when mail collection throws
+ok 3 - live runner preserves successful chain evidence when mail collection throws
+  ---
+  duration_ms: 6.120003
+  type: 'test'
+  ...
+# Subtest: live runner preserves mail observation when chain transport throws
+ok 4 - live runner preserves mail observation when chain transport throws
+  ---
+  duration_ms: 1.177945
+  type: 'test'
+  ...
+# Subtest: live runner passes pinned target identity to fresh read collector, never a saved response
+ok 5 - live runner passes pinned target identity to fresh read collector, never a saved response
+  ---
+  duration_ms: 1.743693
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 65.55347
+
+Trailing whitespace normalized for Git; original output retained in excluded private-evidence/tdd-raw/live-draft-setup/.

@@ -1,0 +1,8 @@
+{
+  "skills/mermail-send-verifier/scripts/live-mermail.mjs": "7452ee982b9d36a64381dbdb01a5caf2b32e6f21b5c0a20c7048e3de82a75613",
+  "skills/mermail-send-verifier/scripts/normalize-mermail.mjs": "5617dd1281814073e3988340156ec6f0cec80f549d9854fcd700e0375c2a5d3e",
+  "skills/mermail-send-verifier/scripts/run-demo.mjs": "0a9ba6f7805ae859e2f536f5cd433e09e327f7711bde3b1754574be91f31ee10",
+  "tests/send-verifier/mermail-live.test.mjs": "596c53e88ac77fc6d1ad900a93754850f46b756012de9e36c29fbeb548dfabd5",
+  "tests/send-verifier/normalizer.test.mjs": "ed7ba926f9557532609104f3c3c2b26273c46d33566fc88c64d43c62d10bfba0",
+  "tests/send-verifier/runner.test.mjs": "9b41a3887dff9596b3667a5ae5df691c7962b35f66106099e2daca1f9d2e5d61"
+}

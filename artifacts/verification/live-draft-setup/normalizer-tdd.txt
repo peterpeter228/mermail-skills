@@ -1,0 +1,164 @@
+TAP version 13
+# Subtest: unobserved live email schema never becomes a guessed record mapping
+ok 1 - unobserved live email schema never becomes a guessed record mapping
+  ---
+  duration_ms: 1.364927
+  type: 'test'
+  ...
+# Subtest: missing recipients stay unknown and untrusted bodies are omitted
+ok 2 - missing recipients stay unknown and untrusted bodies are omitted
+  ---
+  duration_ms: 0.149583
+  type: 'test'
+  ...
+# Subtest: null and malformed input cannot imply a sent or processing record
+ok 3 - null and malformed input cannot imply a sent or processing record
+  ---
+  duration_ms: 0.220526
+  type: 'test'
+  ...
+# Subtest: observed draft shape maps only metadata and confirmed scoped mailbox identity
+not ok 4 - observed draft shape maps only metadata and confirmed scoped mailbox identity
+  ---
+  duration_ms: 1.947664
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/normalizer.test.mjs:20:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + null
+    - 'fixture-draft'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'fixture-draft'
+  actual: ~
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/normalizer.test.mjs:22:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: mailbox identity cannot come from message claims or malformed context
+ok 5 - mailbox identity cannot come from message claims or malformed context
+  ---
+  duration_ms: 0.210214
+  type: 'test'
+  ...
+# Subtest: unobserved states and provider guesses never become sent or processing
+ok 6 - unobserved states and provider guesses never become sent or processing
+  ---
+  duration_ms: 0.249374
+  type: 'test'
+  ...
+# Subtest: missing malformed and alternate recipient fields stay unknown
+ok 7 - missing malformed and alternate recipient fields stay unknown
+  ---
+  duration_ms: 0.163891
+  type: 'test'
+  ...
+# Subtest: unsafe body and unknown inherited metadata are not consumed
+not ok 8 - unsafe body and unknown inherited metadata are not consumed
+  ---
+  duration_ms: 0.418915
+  type: 'test'
+  location: '/root/code/mermail-skills/tests/send-verifier/normalizer.test.mjs:43:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    null !== 'draft'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'draft'
+  actual: ~
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///root/code/mermail-skills/tests/send-verifier/normalizer.test.mjs:45:191)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 6
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64.439319
+
+RED_EXIT_CODE=1
+TAP version 13
+# Subtest: unobserved live email schema never becomes a guessed record mapping
+ok 1 - unobserved live email schema never becomes a guessed record mapping
+  ---
+  duration_ms: 1.964097
+  type: 'test'
+  ...
+# Subtest: missing recipients stay unknown and untrusted bodies are omitted
+ok 2 - missing recipients stay unknown and untrusted bodies are omitted
+  ---
+  duration_ms: 0.26556
+  type: 'test'
+  ...
+# Subtest: null and malformed input cannot imply a sent or processing record
+ok 3 - null and malformed input cannot imply a sent or processing record
+  ---
+  duration_ms: 0.295056
+  type: 'test'
+  ...
+# Subtest: observed draft shape maps only metadata and confirmed scoped mailbox identity
+ok 4 - observed draft shape maps only metadata and confirmed scoped mailbox identity
+  ---
+  duration_ms: 1.447341
+  type: 'test'
+  ...
+# Subtest: mailbox identity cannot come from message claims or malformed context
+ok 5 - mailbox identity cannot come from message claims or malformed context
+  ---
+  duration_ms: 0.263996
+  type: 'test'
+  ...
+# Subtest: unobserved states and provider guesses never become sent or processing
+ok 6 - unobserved states and provider guesses never become sent or processing
+  ---
+  duration_ms: 0.176439
+  type: 'test'
+  ...
+# Subtest: missing malformed and alternate recipient fields stay unknown
+ok 7 - missing malformed and alternate recipient fields stay unknown
+  ---
+  duration_ms: 0.277411
+  type: 'test'
+  ...
+# Subtest: unsafe body and unknown inherited metadata are not consumed
+ok 8 - unsafe body and unknown inherited metadata are not consumed
+  ---
+  duration_ms: 0.283649
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 59.96491
+
+GREEN_EXIT_CODE=0
+
+Trailing whitespace normalized for Git; original output retained in excluded private-evidence/tdd-raw/live-draft-setup/.

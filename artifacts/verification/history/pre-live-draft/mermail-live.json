@@ -1,15 +1,15 @@
 {
   "source": "LIVE",
-  "captured_at": "2026-09-18T05:36:30.461Z",
+  "captured_at": "2026-09-18T05:16:16.457Z",
   "endpoint": "https://console.mermail.app/mcp",
   "auth_mode": "native_codex_oauth",
   "initialize": "PASS",
   "catalog": "PASS",
   "list_mailboxes": "PASS",
-  "selected_record": "PASS",
-  "reason_code": "selected_record_observed",
-  "call_budget": 2,
-  "tool_calls": 2,
+  "selected_record": "BLOCKED",
+  "reason_code": "no_mailboxes",
+  "call_budget": 1,
+  "tool_calls": 1,
   "evidence_refs": [
     "artifacts/verification/mermail-live.json"
   ],
@@ -18,6 +18,5 @@
   "runtime_status": "connected",
   "discovered_tool_count": 85,
   "read_tool": "list_mailboxes",
-  "mailbox_count": 1,
-  "selected_read_tool": "get_email"
+  "mailbox_count": 0
 }

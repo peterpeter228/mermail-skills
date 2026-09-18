@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/report.html",
+    "status": 200,
+    "bytes": 7692,
+    "draft_assessment_present": true
+  },
+  {
+    "path": "/report.json",
+    "status": 200,
+    "bytes": 4260,
+    "draft_assessment_present": true
+  },
+  {
+    "path": "/../private-evidence/mermail-demo-target.json",
+    "status": 403
+  },
+  {
+    "path": "/%2e%2e/AGENTS.md",
+    "status": 403
+  }
+]

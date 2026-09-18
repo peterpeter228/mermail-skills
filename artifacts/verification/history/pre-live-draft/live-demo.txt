@@ -1,0 +1,5 @@
+
+> mermail-skills@1.5.5 demo:live
+> node skills/mermail-send-verifier/scripts/run-demo.mjs live
+
+{"mode":"live","mail":{"source":"BLOCKED","assessment":"EVIDENCE_UNAVAILABLE"},"avalanche":{"source":"LIVE","assessment":"RECEIPT_SUCCESS_OBSERVED"},"business":"NOT_VERIFIED","report":"artifacts/demo/report.html"}

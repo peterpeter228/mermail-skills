@@ -2,44 +2,45 @@
   "case_id": "avalanche-execution",
   "claim_type": "transaction_execution",
   "network": "mainnet",
-  "tx_hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
+  "tx_hash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
   "evidence_source": "LIVE",
-  "captured_at": "2026-09-18T05:20:14.363Z",
+  "captured_at": "2026-09-18T05:36:35.835Z",
   "assessment": "RECEIPT_SUCCESS_OBSERVED",
   "business_state": "NOT_VERIFIED",
   "notice": "PUBLIC THIRD-PARTY TRANSACTION FOR DEMO ONLY. THIS IS NOT THE USER'S PAYMENT.",
   "observed_fields": {
     "chain_id": "0xa86a",
     "transaction": {
-      "hash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-      "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-      "blockNumber": "0x5b2345c",
-      "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+      "hash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+      "blockHash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+      "blockNumber": "0x5b23812",
+      "from": "0xea5b25febe1a85cf4aa3741475c7c0031e1d0b6a",
       "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
       "value": "0x0",
-      "nonce": "0x38ad0"
+      "nonce": "0x38a51"
     },
     "receipt": {
-      "transactionHash": "0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-      "blockHash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-      "blockNumber": "0x5b2345c",
-      "from": "0x7816cb1110be7b53c4464350b392ad4416819f8b",
+      "transactionHash": "0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+      "blockHash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+      "blockNumber": "0x5b23812",
+      "from": "0xea5b25febe1a85cf4aa3741475c7c0031e1d0b6a",
       "to": "0x28d9ccedf1b7ac9b3f090f4f0292837de87c1d39",
       "status": "0x1"
     },
     "block": {
-      "hash": "0xaf007dd2df1c69dc73e8bce8b5f3d154fa1bd1b50b3fe36bc2ee9e1cce53601d",
-      "number": "0x5b2345c"
+      "hash": "0x0071f467b659c7da0e330bbda11d3b60baaa91b721e7c58f2364c29e24cc8330",
+      "number": "0x5b23812"
     }
   },
   "evidence_refs": [
-    "rpc:mainnet:eth_chainId:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-    "rpc:mainnet:eth_getTransactionByHash:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-    "rpc:mainnet:eth_getTransactionReceipt:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7",
-    "rpc:mainnet:eth_getBlockByNumber:0xf2c4b0007a60a4207e5d8e0e29f2440d1867755fcb85636efffb5932fdd346a7"
+    "rpc:mainnet:eth_chainId:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+    "rpc:mainnet:eth_getTransactionByHash:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+    "rpc:mainnet:eth_getTransactionReceipt:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883",
+    "rpc:mainnet:eth_getBlockByNumber:0x28166b972de63a2a404b5ac634e0638f4f284debe1a9b093c70bff1f978db883"
   ],
   "limitations": [
     "Execution evidence does not establish a business or payment relationship.",
-    "No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented."
+    "No finality guarantee, invoice settlement, customer identity, token ownership, bridging, signing or submission is implemented.",
+    "Public sample independently reread after bounded discovery."
   ]
 }

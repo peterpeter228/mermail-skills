@@ -1,4 +1,4 @@
-import {mkdir,writeFile} from 'node:fs/promises';
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {classifyMail} from './classify-mail.mjs';
@@ -8,7 +8,7 @@ import {verifyTransaction,sampleTransaction} from '../../../demo/avalanche/avala
 import {FIXTURE_TX_HASH,fixtureFetch} from '../../../demo/avalanche/fixture.mjs';
 const root=fileURLToPath(new URL('../../../',import.meta.url));
 const save=async(name,data,privateFile=false)=>{const file=path.join(root,name);await mkdir(path.dirname(file),{recursive:true});await writeFile(file,typeof data==='string'?data:JSON.stringify(redact(data),null,2)+'\n',{mode:privateFile?0o600:0o644});};
-export async function runDemo(mode,{write=true,collectMail,collectSample=sampleTransaction,verifyChain=verifyTransaction}={}) {
+export async function runDemo(mode,{write=true,collectMail,collectSample=sampleTransaction,verifyChain=verifyTransaction,mailSelection}={}) {
  if(!['offline','live'].includes(mode))throw new TypeError('Invalid demo mode');
  let mail,chain;
  if(mode==='offline') {
@@ -16,7 +16,12 @@ export async function runDemo(mode,{write=true,collectMail,collectSample=sampleT
   chain=await verifyTransaction({network:'mainnet',txHash:FIXTURE_TX_HASH,evidenceSource:'FIXTURE',fetchImpl:fixtureFetch});
  } else {
   collectMail ??= (await import('./live-mermail.mjs')).probeMermail;
-  const [mailResult,chainResult]=await Promise.allSettled([Promise.resolve().then(()=>collectMail()),Promise.resolve().then(()=>collectSample({network:'mainnet'}))]);
+  // Only target identity is persisted. The collector must fetch a fresh record.
+  if(mailSelection === undefined) {
+   try {mailSelection=JSON.parse(await readFile(path.join(root,'private-evidence/mermail-demo-target.json'),'utf8'));}
+   catch(error) {if(error.code==='ENOENT')mailSelection=null;else throw new Error('Invalid local demo selection');}
+  }
+  const [mailResult,chainResult]=await Promise.allSettled([Promise.resolve().then(()=>collectMail({selection:mailSelection})),Promise.resolve().then(()=>collectSample({network:'mainnet'}))]);
   const captured_at=new Date().toISOString();
   const probe=mailResult.status==='fulfilled'?mailResult.value:{claim:{case_id:'mail-live-unavailable',mailbox_id:'unselected',selected_email_id:null,claim_type:'sent',expected_recipient:null,evidence_source:'BLOCKED'},evidence:{records:[],error:'TRANSPORT_UNAVAILABLE',captured_at,limitations:['Mail evidence collection unavailable.'],evidence_refs:[]},connection:{source:'BLOCKED',initialize:false,catalog:false,list_mailboxes:false,selected_record:false,reason_code:'TRANSPORT_UNAVAILABLE',captured_at}};
   const sample=chainResult.status==='fulfilled'?chainResult.value:{case_id:'chain-live-unavailable',claim_type:'transaction_execution',network:'mainnet',tx_hash:null,evidence_source:'BLOCKED',assessment:'RPC_UNAVAILABLE',captured_at,observed_fields:{},limitations:['RPC collection unavailable.'],evidence_refs:[],business_state:'NOT_VERIFIED'};

@@ -1,0 +1,71 @@
+{
+  "authorization": "Explicit user authorization: one dedicated demo mailbox and one fixed synthetic self-addressed draft; no send, wallet or publication.",
+  "created_at": "2026-09-18T05:32:54.597Z",
+  "calls": [
+    {
+      "tool": "list_mailboxes",
+      "arguments": {},
+      "captured_at": "2026-09-18T05:32:58.989Z",
+      "status": "RETURNED"
+    },
+    {
+      "tool": "create_mailbox",
+      "arguments": {
+        "body": {
+          "email": "send-verifier-demo@mermail.app",
+          "name": "Send Verifier Demo",
+          "settings": {
+            "agentInbox": {
+              "mode": "verification",
+              "automationsEnabled": false
+            }
+          }
+        },
+        "idempotencyKey": "sv-demo-mailbox-20260918-once"
+      },
+      "captured_at": "2026-09-18T05:32:59.338Z",
+      "status": "RETURNED"
+    },
+    {
+      "tool": "list_mailboxes",
+      "arguments": {},
+      "captured_at": "2026-09-18T05:33:28.310Z",
+      "status": "RETURNED"
+    },
+    {
+      "tool": "save_draft",
+      "arguments": {
+        "mailboxId": "d6f5a492-10b8-405e-9879-48599ce2a1bf",
+        "idempotencyKey": "sv-demo-draft-20260918-once",
+        "body": {
+          "to": "send-verifier-demo@mermail.app",
+          "subject": "[SV-LIVE-DEMO] Agent completion verification",
+          "body": "SHA256:91d2bf042dc330462ec26ad88abfc0ab1ddfb1ea3150d84159b84dbd62966cf5",
+          "body_format": "text"
+        }
+      },
+      "captured_at": "2026-09-18T05:33:29.178Z",
+      "status": "RETURNED"
+    },
+    {
+      "tool": "get_email",
+      "arguments": {
+        "mailboxId": "d6f5a492-10b8-405e-9879-48599ce2a1bf",
+        "emailId": "634b3da8-b3e1-46bf-b6e0-3080629582d9",
+        "query": {
+          "metadata_only": true,
+          "agent_safe_content": true,
+          "require_scan_status": "clean"
+        }
+      },
+      "captured_at": "2026-09-18T05:34:08.990Z",
+      "status": "RETURNED"
+    }
+  ],
+  "counts": {
+    "create_mailbox": 1,
+    "save_draft": 1,
+    "send_email": 0,
+    "wallet": 0
+  }
+}
